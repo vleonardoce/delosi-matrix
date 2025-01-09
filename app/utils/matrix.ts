@@ -5,7 +5,7 @@ export const buildMatrix = (dimension: number) =>
     Array.from({ length: dimension }, (_, j) => i * dimension + j + 1)
   );
 
-export const fromFlatToMatrix = (form: any) => {
+export const fromFlatToMatrix = (form: Record<string, number>) => {
   const matrix: Matrix = [];
   for (const key in form) {
     const [row, col] = key.split("-").map(Number);

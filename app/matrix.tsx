@@ -23,14 +23,14 @@ export default function Matrix() {
     reset: resetMatrixForm,
   } = useForm();
 
-  const onSubmit = (form: any) => {
+  const onSubmit = (form: Record<string, number>) => {
     const matrix = buildMatrix(form.dimension);
     setMatrix(matrix);
     resetMatrixForm();
     setRotatedMatrix([]);
   };
 
-  const onMatrixSubmit = (form: any) => {
+  const onMatrixSubmit = (form: Record<string, number>) => {
     const matrix = fromFlatToMatrix(form);
     const rotatedMatrix = rotateMatrix(matrix);
     setRotatedMatrix(rotatedMatrix);
