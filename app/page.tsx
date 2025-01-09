@@ -1,7 +1,15 @@
+import Matrix from "./matrix";
+
 export const metadata = {
-  title: "App Router",
+  title: "Matrix",
+  description: "Matriz para prueba técnica.",
 };
 
 export default function Page() {
-  return <h1>App Router</h1>;
+  return (
+    <main>
+      <h1 className="title">Matriz</h1>
+      <Matrix />
+    </main>
+  );
 }
